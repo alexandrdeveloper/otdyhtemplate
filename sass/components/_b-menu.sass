@@ -1,0 +1,29 @@
+.b-menu     
+    &__list 
+        width: 100%
+        background-color: #a4be3e
+        border-radius: 6px
+        height: 76px 
+        display: flex 
+        flex-direction: row 
+        flex-wrap: nowrap 
+        justify-content: center 
+        align-items: center
+    &__link
+        color: #ffffff
+        font-size: 15px
+        font-family: 'opensans'
+        font-weight: 400
+        text-decoration: none        
+       
+        &:not(:last-child) 
+            &::after 
+                content: ''
+                display: inline-block
+                width: 13px
+                height: 9px
+                background-image: url('../img/Icons/header_icon.svg')
+                background-size: 100% auto 
+                background-position: center center 
+                background-repeat: no-repeat
+                margin: 0 32px

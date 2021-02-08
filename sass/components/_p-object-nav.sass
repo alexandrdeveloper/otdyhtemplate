@@ -1,0 +1,60 @@
+.p-object-nav 
+    display: table
+    table-layout: fixed
+    width: 100%
+    &__item 
+        display: table-cell
+        text-decoration: none
+        width: auto 
+        &:not(:last-child)
+            padding-right: 4px
+    &__label 
+        display: flex
+        flex-direction: row 
+        align-items: center
+        justify-content: center
+        width: 100%
+        background-color: #eef4f4
+        border-radius: 2px 2px 0 0  
+        padding: 16px 0px  
+        span 
+            color: #000000
+            font-size: 14px
+            font-weight: 700
+            font-family: 'opensansbold'
+    &__icon 
+        height: 22px
+        width: 22px
+        margin-right: 9px   
+        position: relative
+        img 
+            display: block
+            position: absolute
+            top: 0
+            left: 0
+            width: 100% 
+            &.hover 
+                opacity: 0
+.p-object-nav__item_active
+    .p-object-nav__label
+        background-color: #fff
+        span
+            color: $accent
+        .p-object-nav__icon
+            img 
+                opacity: 0
+            img.hover 
+                opacity: 1
+.p-object-nav__label
+    &:hover 
+        background-color: #fff
+        span
+            color: $accent
+        .p-object-nav__icon
+            img 
+                opacity: 0
+            img.hover 
+                opacity: 1
+.p-object-nav__item_active            
+        
+            

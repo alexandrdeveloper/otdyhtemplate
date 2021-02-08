@@ -1,0 +1,76 @@
+.b-headline
+    position: relative
+    padding: 23px 0
+    &__row 
+        display: flex
+        flex-direction: row 
+        justify-content: space-between
+        align-items: center 
+        height: 100px 
+        position: relative
+    &__logo 
+        position: absolute
+        top: 50%
+        left: 51%
+        transform: translate(-50%, -50%)
+    &-menu 
+        list-style: none 
+        padding-left: 0
+        margin: 0
+        &__item 
+            display: inline-block
+            &:not(:last-child)
+                margin-right: 27px
+        &__link 
+            font-size: 14px
+            font-family: 'opensans'
+            font-weight: 400
+            color: #aaaaaa 
+            text-decoration: none
+            &:hover 
+                color: #a9c451
+
+
+.b-logo 
+    display: block 
+    height: 100%
+    width: auto
+    img 
+        display: block
+        width: 90%
+
+.b-search 
+    width: 100%
+    max-width: 260px    
+    display: flex
+    box-sizing: border-box
+    justify-content: space-between
+    position: relative
+    &__input 
+        border: none 
+        background-color: #fff 
+        padding: 11px 22px
+        font-size: 14px
+        font-family: 'opensans'
+        color: $text
+        width: 100%
+        border: 1px solid #c7dce2
+        border-radius: 6px
+        transition: .2s
+        &:placeholder
+            color: #bfd7de 
+        &:focus 
+            border-color: $accent
+    &__submit 
+        position: absolute
+        top: 0
+        right: 0
+        min-height: 100%  
+        padding: 0 15px
+        border: none 
+        background-color: transparent
+        z-index: 2
+        img 
+            display: block
+            width: 19px 
+            height: 19px

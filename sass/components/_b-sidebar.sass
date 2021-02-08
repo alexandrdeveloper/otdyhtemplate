@@ -1,0 +1,104 @@
+@import "vars"
+.b-sidebar 
+    width: 100%
+    max-width: 360px
+    box-sizing: border-box
+    a 
+        text-decoration: none
+    &__box 
+        box-shadow: 0 13px 35px rgba(190, 196, 197, 0.43)
+        margin-bottom: 33px
+        background-color: #fff
+        border-radius: 0 0 6px 6px
+        overflow: hidden
+    &-box 
+        
+        &__title
+            display: block
+            text-align: left
+            padding: 18px 29px 
+            font-family: 'lora-bold'
+            font-size: 18px 
+            color: #fff
+            border-radius: 6px 6px 0 0
+            &_green
+                background-color: #a9c451
+            &_blue 
+                background-color: #3ba1b8
+            &_orange
+                background-color: #e6b869
+        &__content 
+            padding: 23px 29px 
+            
+    &-title 
+        color: #0284a8
+        font-family: "opensans"
+        font-size: 18px
+        font-weight: 700
+        font-style: normal
+        letter-spacing: normal
+        text-align: left 
+        display: block
+        letter-spacing: 1px 
+        margin-bottom: 16px 
+        &_wave 
+            padding-bottom: 20px
+            position: relative
+            &::after 
+                content: ''
+                display: block
+                width: 100%
+                height: 13px
+                background-image: url('../img/Icons/waves_3.svg')
+                background-size: auto 50%
+                background-position: center center 
+                background-repeat: no-repeat 
+                position: absolute
+                bottom: 0
+                left: 0
+        &_icon 
+            display: flex
+            width: 100%
+            flex-direction: row 
+            justify-content: flex-start
+            align-items: center
+            img 
+                display: block
+                width: 19px
+                height: auto 
+                margin-right: 12px
+    &-list__item 
+        &:nth-child(2)
+            .sidebar-sublist
+                margin-bottom: 22px
+            
+    &-sublist
+        padding-left: 0
+        list-style: none 
+        margin-bottom: 30px
+        li, a
+            color: #0284a8
+            font-family: "opensans"
+            font-size: 14px
+            font-weight: 400
+            &:hover 
+                color: $accent 
+        li 
+            display: block
+            &:not(:last-child)
+                margin-bottom: 8px
+a.b-sidebar-title:hover 
+    color: $accent
+
+.b-catalog-list__more
+    display: flex 
+    justify-content: center
+    align-items: center
+    background-color: #a9c451
+    border-radius: 4px
+    color: #ffffff
+    font-size: 14px
+    font-family: 'opensansbold'
+    height: 54px
+    text-decoration: none 
+    
