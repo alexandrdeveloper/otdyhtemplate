@@ -49,6 +49,16 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
     })
+
+    for (const sideNavToggle of document.querySelectorAll(".b-sidenav-toggle")) {
+        sideNavToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('.b-sidenav').classList.toggle('b-sidenav_opened');
+            document.querySelector('body').classList.toggle('no-scroll');
+
+        })
+    }
+    
     
 
 });
