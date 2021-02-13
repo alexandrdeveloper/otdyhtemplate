@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
 	
-/* Home Page Scripts */   
+/* Home Page Scripts */ 
+    
+
+
 
     for (const dropdown of document.querySelectorAll(".b-select-group")) {
         dropdown.addEventListener('click', function() {
@@ -24,6 +27,41 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
     });
+
+    let tabToggle = document.querySelectorAll('.b-tab-filter__toggle');
+    let tabContent = document.querySelectorAll('.b-tab-filter__item');
+    let heroBg = document.querySelectorAll('.b-hero-bg__item');
+    let heroContent = document.querySelectorAll('.b-hero__content');
+
+    for (let i = 0; i<tabToggle.length; i++) {
+        tabToggle[i].addEventListener('click', function(e) {
+            e.preventDefault();
+            for (let i = 0; i < tabContent.length; i++) {
+                tabContent[i].classList.remove('b-tab-filter__item_active');
+            }
+            for (let i = 0; i < tabToggle.length; i++) {
+                tabToggle[i].classList.remove('b-tab-filter__toggle_active');
+            }
+            for (let i = 0; i < heroBg.length; i++) {
+                heroBg[i].classList.remove('b-hero-bg__item_visible');
+            }
+            for (let i = 0; i < heroContent.length; i++) {
+                heroContent[i].classList.remove('b-hero__content_visible');
+            }
+            let activeTabContentId = this.dataset.id;
+            let activeHeroBg = this.dataset.bg;
+            let activeHeroContent = this.dataset.hero;
+            document.getElementById(activeTabContentId).classList.add('b-tab-filter__item_active');
+            document.getElementById(activeHeroBg).classList.add('b-hero-bg__item_visible');
+            document.getElementById(activeHeroContent).classList.add('b-hero__content_visible');
+            this.classList.add('b-tab-filter__toggle_active');
+        });
+    }
+
+   
+    
+  
+
     
 /* Objects Page Scripts */ 
     for (const modalToggle of document.querySelectorAll(".modal-toggle")) {

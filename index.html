@@ -82,8 +82,24 @@
 		<!-- /.b-header -->
 		<section class="b-hero">
 			<div class="container">
-				<div class="b-hero__content">
+				<div class="b-hero__content b-hero__content_visible" id="hero-content-1">
+					<h1 class="b-hero__title">Отдых в Краснодарском крае 2021</h1>
+					<p class="b-hero__description">Объекты отдыха на берегах Азовского и Черного моря в 2019. 
+						Мы ищим за Вас для экономии вашего времени, 
+						Вам остается сделать выбор и забронировать объект.</p>
+					<img class="b-hero__wave" src="img/Icons/waves_1.svg" alt="wave">
+				</div>
+				<!-- /.bg-hero__content -->
+				<div class="b-hero__content" id="hero-content-2">
 					<h1 class="b-hero__title">Отдых На Черном Море в Крыму 2021</h1>
+					<p class="b-hero__description">Объекты отдыха на берегах Азовского и Черного моря в 2019. 
+						Мы ищим за Вас для экономии вашего времени, 
+						Вам остается сделать выбор и забронировать объект.</p>
+					<img class="b-hero__wave" src="img/Icons/waves_1.svg" alt="wave">
+				</div>
+				<!-- /.bg-hero__content -->
+				<div class="b-hero__content" id="hero-content-3">
+					<h1 class="b-hero__title">Отдых в Абхазии 2021</h1>
 					<p class="b-hero__description">Объекты отдыха на берегах Азовского и Черного моря в 2019. 
 						Мы ищим за Вас для экономии вашего времени, 
 						Вам остается сделать выбор и забронировать объект.</p>
@@ -93,11 +109,11 @@
 			</div>
 			<!-- /.container -->
 			<div class="b-hero__bg b-hero-bg">
-				<div class="b-hero-bg__item b-hero-bg__item_visible"><img src="img/home-hero/slide-1.jpg" alt="slide-1"></div>
+				<div class="b-hero-bg__item b-hero-bg__item_visible" id="bg-1"><img src="img/home-hero/slide-1.jpg" alt="slide-1"></div>
 				<!-- /.b-hero-bg__item -->
-				<div class="b-hero-bg__item"><img src="img/home-hero/slide-2.jpg" alt="slide-1"></div>
+				<div class="b-hero-bg__item" id="bg-2"><img src="img/home-hero/slide-2.jpg" alt="slide-1"></div>
 				<!-- /.b-hero-bg__item -->
-				<div class="b-hero-bg__item"><img src="img/home-hero/slide-3.jpg" alt="slide-1"></div>
+				<div class="b-hero-bg__item" id="bg-3"><img src="img/home-hero/slide-3.jpg" alt="slide-1"></div>
 				<!-- /.b-hero-bgr__item -->
 			</div> 
 			
@@ -118,93 +134,252 @@
 		<section class="b-hero__filter">
 			<div class="container">
 				<div class="b-tab-filter">
-					<div class="b-tab-filter__header">
-						<a href="#" class="b-tab-filter__toggle b-tab-filter__toggle_red b-tab-filter__toggle_active">Краснодарский край</a>
+					<div class="b-tab-filter__header">						
+						<a href="#" data-id="tab-1" data-bg="bg-1" data-hero="hero-content-1" class="b-tab-filter__toggle b-tab-filter__toggle_red b-tab-filter__toggle_active">Краснодарский край</a>
 						<!-- /.b-tab-filter__toggle -->
-						<a href="#" class="b-tab-filter__toggle b-tab-filter__toggle_orange">Крым</a>
+						<a href="#" data-id="tab-2" data-bg="bg-2" data-hero="hero-content-2"  class="b-tab-filter__toggle b-tab-filter__toggle_orange">Крым</a>
 						<!-- /.b-tab-filter__toggle -->
-						<a href="#" class="b-tab-filter__toggle b-tab-filter__toggle_blue">Абхазия</a>
+						<a href="#" data-id="tab-3" data-bg="bg-3" data-hero="hero-content-3" class="b-tab-filter__toggle b-tab-filter__toggle_blue">Абхазия</a>
 						<!-- /.b-tab-filter__toggle -->
 					</div>
+					
 					<!-- /.tab-filter__header -->
-					<form action="#" class="b-tab-filter__main">
-						<div class="b-select-group">
-							<div class="b-select-group__label">Отдых в:</div>
-							<!-- /.b-select-group__label -->
-							<div class="b-tab-filter__select custom-select">
-								<div class="custom-select__trigger"><span>Туапсе</span>
-									<div class="arrow"></div>
+					<div class="b-tab-liter__main">
+						<form action="#" class="b-tab-filter__item b-tab-filter__item_active" id="tab-1">
+							<div class="b-select-group">
+								<div class="b-select-group__label">Отдых в Краснодарский край:</div>
+								<!-- /.b-select-group__label -->
+								<div class="b-tab-filter__select custom-select">
+									<div class="custom-select__trigger"><span>Туапсе</span>
+										<div class="arrow"></div>
+									</div>
+									<div class="custom-options">
+										<span class="custom-options__item custom-options__item_selected" data-value="Туапсе">Туапсе</span>
+										<span class="custom-options__item" data-value="Алупка">Алупка</span>
+										<span class="custom-options__item" data-value="Алушта">Алушта</span>
+										<span class="custom-options__item" data-value="Алушта">Ялта</span>
+										<span class="custom-options__item" data-value="Алушта">Керчь</span>
+										<span class="custom-options__item" data-value="Алушта">Севастополь</span>
+										<span class="custom-options__item" data-value="Алушта">Гурзуф</span>
+										<span class="custom-options__item" data-value="Алушта">Евпатория</span>
+										<span class="custom-options__item" data-value="Алушта">Гаспра</span>
+										<span class="custom-options__item" data-value="Алушта">Береговое (Крым)</span>
+									</div>
 								</div>
-								<div class="custom-options">
-									<span class="custom-options__item custom-options__item_selected" data-value="Туапсе">Туапсе</span>
-									<span class="custom-options__item" data-value="Алупка">Алупка</span>
-									<span class="custom-options__item" data-value="Алушта">Алушта</span>
-									<span class="custom-options__item" data-value="Алушта">Ялта</span>
-									<span class="custom-options__item" data-value="Алушта">Керчь</span>
-									<span class="custom-options__item" data-value="Алушта">Севастополь</span>
-									<span class="custom-options__item" data-value="Алушта">Гурзуф</span>
-									<span class="custom-options__item" data-value="Алушта">Евпатория</span>
-									<span class="custom-options__item" data-value="Алушта">Гаспра</span>
-									<span class="custom-options__item" data-value="Алушта">Береговое (Крым)</span>
-								</div>
+								<!-- /.custom-select -->
+								
 							</div>
-							<!-- /.custom-select -->
-							
-						</div>
-						<!-- /.b-select-group -->
-						<div class="b-select-group">
-							<div class="b-select-group__label">Населенный пункт:</div>
-							<!-- /.b-select-group__label -->
-							<div class="b-tab-filter__select custom-select">
-								<div class="custom-select__trigger"><span>Лермонтово</span>
-									<div class="arrow"></div>
-								</div>
-								<div class="custom-options">
-									<span class="custom-options__item custom-options__item_selected" data-value="Лермонтово">Лермонтово</span>
-									<span class="custom-options__item" data-value="Алупка">Алупка</span>
-									<span class="custom-options__item" data-value="Алушта">Алушта</span>
-									<span class="custom-options__item" data-value="Алушта">Ялта</span>
-									<span class="custom-options__item" data-value="Алушта">Керчь</span>
-									<span class="custom-options__item" data-value="Алушта">Севастополь</span>
-									<span class="custom-options__item" data-value="Алушта">Гурзуф</span>
-									<span class="custom-options__item" data-value="Алушта">Евпатория</span>
-									<span class="custom-options__item" data-value="Алушта">Гаспра</span>
-									<span class="custom-options__item" data-value="Алушта">Береговое (Крым)</span>
-								</div>
+							<!-- /.b-select-group -->
+							<div class="b-select-group">
+								<div class="b-select-group__label">Населенный пункт:</div>
+								<!-- /.b-select-group__label -->
+								<div class="b-tab-filter__select custom-select">
+									<div class="custom-select__trigger"><span>Лермонтово</span>
+										<div class="arrow"></div>
+									</div>
+									<div class="custom-options">
+										<span class="custom-options__item custom-options__item_selected" data-value="Лермонтово">Лермонтово</span>
+										<span class="custom-options__item" data-value="Алупка">Алупка</span>
+										<span class="custom-options__item" data-value="Алушта">Алушта</span>
+										<span class="custom-options__item" data-value="Алушта">Ялта</span>
+										<span class="custom-options__item" data-value="Алушта">Керчь</span>
+										<span class="custom-options__item" data-value="Алушта">Севастополь</span>
+										<span class="custom-options__item" data-value="Алушта">Гурзуф</span>
+										<span class="custom-options__item" data-value="Алушта">Евпатория</span>
+										<span class="custom-options__item" data-value="Алушта">Гаспра</span>
+										<span class="custom-options__item" data-value="Алушта">Береговое (Крым)</span>
+									</div>
 
-							</div>
-							<!-- /.custom-select -->
-							
-						</div>
-						<!-- /.b-select-group -->
-						<div class="b-select-group">
-							<div class="b-select-group__label">Вид жилья:</div>
-							<!-- /.b-select-group__label -->
-							<div class="b-tab-filter__select custom-select">
-								<div class="custom-select__trigger"><span>База отдыха</span>
-									<div class="arrow"></div>
 								</div>
-								<div class="custom-options">
-									<span class="custom-options__item custom-options__item_selected" data-value="База отдыха">База отдыха</span>
-									<span class="custom-options__item" data-value="Алупка">Алупка</span>
-									<span class="custom-options__item" data-value="Алушта">Алушта</span>
-									<span class="custom-options__item" data-value="Алушта">Ялта</span>
-									<span class="custom-options__item" data-value="Алушта">Керчь</span>
-									<span class="custom-options__item" data-value="Алушта">Севастополь</span>
-									<span class="custom-options__item" data-value="Алушта">Гурзуф</span>
-									<span class="custom-options__item" data-value="Алушта">Евпатория</span>
-									<span class="custom-options__item" data-value="Алушта">Гаспра</span>
-									<span class="custom-options__item" data-value="Алушта">Береговое (Крым)</span>
-								</div>
+								<!-- /.custom-select -->
+								
 							</div>
-							<!-- /.custom-select -->
-							
-						</div>
-						<!-- /.b-select-group -->
-						<input type="submit" class="b-tab-filter__submit" value="Найти">
+							<!-- /.b-select-group -->
+							<div class="b-select-group">
+								<div class="b-select-group__label">Вид жилья:</div>
+								<!-- /.b-select-group__label -->
+								<div class="b-tab-filter__select custom-select">
+									<div class="custom-select__trigger"><span>База отдыха</span>
+										<div class="arrow"></div>
+									</div>
+									<div class="custom-options">
+										<span class="custom-options__item custom-options__item_selected" data-value="База отдыха">База отдыха</span>
+										<span class="custom-options__item" data-value="Алупка">Алупка</span>
+										<span class="custom-options__item" data-value="Алушта">Алушта</span>
+										<span class="custom-options__item" data-value="Алушта">Ялта</span>
+										<span class="custom-options__item" data-value="Алушта">Керчь</span>
+										<span class="custom-options__item" data-value="Алушта">Севастополь</span>
+										<span class="custom-options__item" data-value="Алушта">Гурзуф</span>
+										<span class="custom-options__item" data-value="Алушта">Евпатория</span>
+										<span class="custom-options__item" data-value="Алушта">Гаспра</span>
+										<span class="custom-options__item" data-value="Алушта">Береговое (Крым)</span>
+									</div>
+								</div>
+								<!-- /.custom-select -->
+								
+							</div>
+							<!-- /.b-select-group -->
+							<input type="submit" class="b-tab-filter__submit" value="Найти">
+						</form>
+						<!-- /.tab-filter__item -->
+						<form action="#" class="b-tab-filter__item" id="tab-2">
+							<div class="b-select-group">
+								<div class="b-select-group__label">Отдых в Крым:</div>
+								<!-- /.b-select-group__label -->
+								<div class="b-tab-filter__select custom-select">
+									<div class="custom-select__trigger"><span>Туапсе</span>
+										<div class="arrow"></div>
+									</div>
+									<div class="custom-options">
+										<span class="custom-options__item custom-options__item_selected" data-value="Туапсе">Туапсе</span>
+										<span class="custom-options__item" data-value="Алупка">Алупка</span>
+										<span class="custom-options__item" data-value="Алушта">Алушта</span>
+										<span class="custom-options__item" data-value="Алушта">Ялта</span>
+										<span class="custom-options__item" data-value="Алушта">Керчь</span>
+										<span class="custom-options__item" data-value="Алушта">Севастополь</span>
+										<span class="custom-options__item" data-value="Алушта">Гурзуф</span>
+										<span class="custom-options__item" data-value="Алушта">Евпатория</span>
+										<span class="custom-options__item" data-value="Алушта">Гаспра</span>
+										<span class="custom-options__item" data-value="Алушта">Береговое (Крым)</span>
+									</div>
+								</div>
+								<!-- /.custom-select -->
+								
+							</div>
+							<!-- /.b-select-group -->
+							<div class="b-select-group">
+								<div class="b-select-group__label">Населенный пункт:</div>
+								<!-- /.b-select-group__label -->
+								<div class="b-tab-filter__select custom-select">
+									<div class="custom-select__trigger"><span>Лермонтово</span>
+										<div class="arrow"></div>
+									</div>
+									<div class="custom-options">
+										<span class="custom-options__item custom-options__item_selected" data-value="Лермонтово">Лермонтово</span>
+										<span class="custom-options__item" data-value="Алупка">Алупка</span>
+										<span class="custom-options__item" data-value="Алушта">Алушта</span>
+										<span class="custom-options__item" data-value="Алушта">Ялта</span>
+										<span class="custom-options__item" data-value="Алушта">Керчь</span>
+										<span class="custom-options__item" data-value="Алушта">Севастополь</span>
+										<span class="custom-options__item" data-value="Алушта">Гурзуф</span>
+										<span class="custom-options__item" data-value="Алушта">Евпатория</span>
+										<span class="custom-options__item" data-value="Алушта">Гаспра</span>
+										<span class="custom-options__item" data-value="Алушта">Береговое (Крым)</span>
+									</div>
 
-					</form>
-					<!-- /.tab-filter__main -->
+								</div>
+								<!-- /.custom-select -->
+								
+							</div>
+							<!-- /.b-select-group -->
+							<div class="b-select-group">
+								<div class="b-select-group__label">Вид жилья:</div>
+								<!-- /.b-select-group__label -->
+								<div class="b-tab-filter__select custom-select">
+									<div class="custom-select__trigger"><span>База отдыха</span>
+										<div class="arrow"></div>
+									</div>
+									<div class="custom-options">
+										<span class="custom-options__item custom-options__item_selected" data-value="База отдыха">База отдыха</span>
+										<span class="custom-options__item" data-value="Алупка">Алупка</span>
+										<span class="custom-options__item" data-value="Алушта">Алушта</span>
+										<span class="custom-options__item" data-value="Алушта">Ялта</span>
+										<span class="custom-options__item" data-value="Алушта">Керчь</span>
+										<span class="custom-options__item" data-value="Алушта">Севастополь</span>
+										<span class="custom-options__item" data-value="Алушта">Гурзуф</span>
+										<span class="custom-options__item" data-value="Алушта">Евпатория</span>
+										<span class="custom-options__item" data-value="Алушта">Гаспра</span>
+										<span class="custom-options__item" data-value="Алушта">Береговое (Крым)</span>
+									</div>
+								</div>
+								<!-- /.custom-select -->
+								
+							</div>
+							<!-- /.b-select-group -->
+							<input type="submit" class="b-tab-filter__submit" value="Найти">
+						</form>
+						<!-- /.tab-filter__item -->
+						<form action="#" class="b-tab-filter__item" id="tab-3">
+							<div class="b-select-group">
+								<div class="b-select-group__label">Отдых в Абхазия:</div>
+								<!-- /.b-select-group__label -->
+								<div class="b-tab-filter__select custom-select">
+									<div class="custom-select__trigger"><span>Туапсе</span>
+										<div class="arrow"></div>
+									</div>
+									<div class="custom-options">
+										<span class="custom-options__item custom-options__item_selected" data-value="Туапсе">Туапсе</span>
+										<span class="custom-options__item" data-value="Алупка">Алупка</span>
+										<span class="custom-options__item" data-value="Алушта">Алушта</span>
+										<span class="custom-options__item" data-value="Алушта">Ялта</span>
+										<span class="custom-options__item" data-value="Алушта">Керчь</span>
+										<span class="custom-options__item" data-value="Алушта">Севастополь</span>
+										<span class="custom-options__item" data-value="Алушта">Гурзуф</span>
+										<span class="custom-options__item" data-value="Алушта">Евпатория</span>
+										<span class="custom-options__item" data-value="Алушта">Гаспра</span>
+										<span class="custom-options__item" data-value="Алушта">Береговое (Крым)</span>
+									</div>
+								</div>
+								<!-- /.custom-select -->
+								
+							</div>
+							<!-- /.b-select-group -->
+							<div class="b-select-group">
+								<div class="b-select-group__label">Населенный пункт:</div>
+								<!-- /.b-select-group__label -->
+								<div class="b-tab-filter__select custom-select">
+									<div class="custom-select__trigger"><span>Лермонтово</span>
+										<div class="arrow"></div>
+									</div>
+									<div class="custom-options">
+										<span class="custom-options__item custom-options__item_selected" data-value="Лермонтово">Лермонтово</span>
+										<span class="custom-options__item" data-value="Алупка">Алупка</span>
+										<span class="custom-options__item" data-value="Алушта">Алушта</span>
+										<span class="custom-options__item" data-value="Алушта">Ялта</span>
+										<span class="custom-options__item" data-value="Алушта">Керчь</span>
+										<span class="custom-options__item" data-value="Алушта">Севастополь</span>
+										<span class="custom-options__item" data-value="Алушта">Гурзуф</span>
+										<span class="custom-options__item" data-value="Алушта">Евпатория</span>
+										<span class="custom-options__item" data-value="Алушта">Гаспра</span>
+										<span class="custom-options__item" data-value="Алушта">Береговое (Крым)</span>
+									</div>
+
+								</div>
+								<!-- /.custom-select -->
+								
+							</div>
+							<!-- /.b-select-group -->
+							<div class="b-select-group">
+								<div class="b-select-group__label">Вид жилья:</div>
+								<!-- /.b-select-group__label -->
+								<div class="b-tab-filter__select custom-select">
+									<div class="custom-select__trigger"><span>База отдыха</span>
+										<div class="arrow"></div>
+									</div>
+									<div class="custom-options">
+										<span class="custom-options__item custom-options__item_selected" data-value="База отдыха">База отдыха</span>
+										<span class="custom-options__item" data-value="Алупка">Алупка</span>
+										<span class="custom-options__item" data-value="Алушта">Алушта</span>
+										<span class="custom-options__item" data-value="Алушта">Ялта</span>
+										<span class="custom-options__item" data-value="Алушта">Керчь</span>
+										<span class="custom-options__item" data-value="Алушта">Севастополь</span>
+										<span class="custom-options__item" data-value="Алушта">Гурзуф</span>
+										<span class="custom-options__item" data-value="Алушта">Евпатория</span>
+										<span class="custom-options__item" data-value="Алушта">Гаспра</span>
+										<span class="custom-options__item" data-value="Алушта">Береговое (Крым)</span>
+									</div>
+								</div>
+								<!-- /.custom-select -->
+								
+							</div>
+							<!-- /.b-select-group -->
+							<input type="submit" class="b-tab-filter__submit" value="Найти">
+						</form>
+						<!-- /.tab-filter__item -->
+					</div>
+					<!-- /.b-tab-liter__main -->
+					
+					
 				</div>
 				<!-- /.tab-filter -->
 			</div>
