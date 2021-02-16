@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 	
 /* Home Page Scripts */ 
-    
 
 
 
@@ -58,7 +57,24 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-   
+    for (const menuToggle of document.querySelectorAll(".menu-toggle")) {
+        menuToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('.b-header').classList.toggle('b-header_open');
+            this.classList.toggle('menu-toggle_active');
+            document.querySelector('.b-page__wrapper').classList.toggle('b-page__wrapper_shadow');
+        });
+    }
+
+    for (const searchToggle of document.querySelectorAll(".search-toggle")) {
+        searchToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('.b-search').classList.toggle('b-search_visible');
+            this.classList.toggle('search-toggle_active');
+            
+        });
+    }
+
     
   
 
