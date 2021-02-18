@@ -112,6 +112,35 @@ document.addEventListener("DOMContentLoaded", function() {
 
         })
     }
+
+    var images = document.querySelectorAll('.b-gallery__item img');
+    for (const objectImages of document.querySelectorAll('.b-gallery__item>img')){
+        objectImages.addEventListener('click', function(){
+            yalb(images);
+        });
+    }
+
+    const objectNav = document.querySelector('.b-object-navbar');
+    const objectNavList = document.querySelector('.p-object-nav');
+    const objectNavTop = objectNavList.offsetTop;
+    const bMain = document.querySelector('.b-main');
+
+    function fixNav() {
+        console.log(objectNavTop, window.scrollY);
+
+        if (window.scrollY >= objectNavTop) {
+            objectNav.classList.add('b-object-navbar_sticky');
+            bMain.style.marginTop = objectNav.offsetHeight + 'px';
+        } else {
+            bMain.style.marginTop = 0;
+            objectNav.classList.remove('b-object-navbar_sticky');
+        }
+    }
+
+    window.addEventListener('scroll', fixNav);
+
+    
+    
     
     
 
