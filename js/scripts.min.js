@@ -80,6 +80,73 @@ document.addEventListener("DOMContentLoaded", function() {
 
     
 /* Objects Page Scripts */ 
+
+// Object Page Navbar Scrolling to section  *** BEGIN
+    function smoothScroll(targ, duration) {
+        let target = document.querySelector(targ);
+        let targetPosition = target.getBoundingClientRect().top + window.scrollY - 100; 
+        let startPosition = window.pageYOffset;
+        let distance = targetPosition - startPosition;
+        let startTime = null;
+
+        function animationScroll(currentTime){
+            if (startTime === null) startTime = currentTime;
+            let timeElapsed = currentTime - startTime;
+            let run = easeInOutQuart(timeElapsed, startPosition, distance, duration);
+            window.scrollTo(0, run);
+            if (timeElapsed < duration) requestAnimationFrame(animationScroll);
+        }
+
+        function easeInOutQuart(t, b, c, d) {
+            t /= d/2;
+            if (t < 1) return c/2*t*t*t*t + b;
+            t -= 2;
+            return -c/2 * (t*t*t*t - 2) + b;
+        };
+
+        requestAnimationFrame(animationScroll);
+        
+    }
+
+    let objectNavItem = document.querySelectorAll('.p-object-nav__item');
+    for (i = 0; i < objectNavItem.length; i++) {
+        objectNavItem[i].addEventListener('click', function(e) {
+            e.preventDefault();            
+            let anchorTarget = this.getAttribute('href');
+            smoothScroll(anchorTarget, 1000);           
+            
+        });
+    }    
+
+    
+
+// Object Page Navbar Scrolling to section  *** END
+
+/** Object Page Navbar Swich Begin **/
+
+    const links = document.querySelectorAll('.p-object-nav__item');
+    const sections = document.querySelectorAll('.navbar-switch');
+    const stickyNav = document.querySelector('.b-object-navbar');
+
+    function changeLinkState() {
+    let index = sections.length;
+    let stickyNavH = stickyNav.offsetHeight;
+    let changeDistance = stickyNavH + 50;
+
+    while(--index && window.scrollY + changeDistance < sections[index].offsetTop) {}
+    
+    links.forEach((link) => link.classList.remove('p-object-nav__item_active'));
+    links[index].classList.add('p-object-nav__item_active');
+    }
+
+    changeLinkState();
+    window.addEventListener('scroll', changeLinkState);
+
+
+/** Object Page Navbar Swich End **/
+
+
+
     for (const modalToggle of document.querySelectorAll(".modal-toggle")) {
         modalToggle.addEventListener('click', function(e) {
             e.preventDefault();
@@ -126,7 +193,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const bMain = document.querySelector('.b-main');
 
     function fixNav() {
-        console.log(objectNavTop, window.scrollY);
 
         if (window.scrollY >= objectNavTop) {
             objectNav.classList.add('b-object-navbar_sticky');
@@ -138,6 +204,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     window.addEventListener('scroll', fixNav);
+
+
+    
 
     
     
