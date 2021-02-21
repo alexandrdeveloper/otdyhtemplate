@@ -224,43 +224,43 @@
 				<div class="container">
 					<div class="b-theme-box b-theme-box_shadow">
 						<div class="b-gallery__grid">							
-                            <a href="img/gallery/gallery-1.jpg" class="b-gallery__item">
+                            <a data-fslightbox="gallery" href="img/gallery/gallery-1.jpg" class="b-gallery__item">
                                 <img src="img/gallery/gallery-1.jpg" alt="gallery">
 							</a>
                             <!-- /.b-gallery__item -->
-                            <a href="img/gallery/gallery-3.jpg" class="b-gallery__item">
+                            <a data-fslightbox="gallery" href="img/gallery/gallery-3.jpg" class="b-gallery__item">
                                 <img src="img/gallery/gallery-3.jpg" alt="gallery">
 							</a>
                             <!-- /.b-gallery__item --> 
-                            <a href="img/gallery/gallery-2.jpg" class="b-gallery__item">
+                            <a data-fslightbox="gallery" href="img/gallery/gallery-2.jpg" class="b-gallery__item">
                                 <img src="img/gallery/gallery-2.jpg" alt="gallery">
 							</a>
                             <!-- /.b-gallery__item -->
                         
                                           
                     
-                            <a href="img/gallery/gallery-4.jpg" class="b-gallery__item">
+                            <a data-fslightbox="gallery" href="img/gallery/gallery-4.jpg" class="b-gallery__item">
                                 <img src="img/gallery/gallery-4.jpg" alt="gallery">
                             </a>
                             <!-- /.b-gallery__item -->                      
                         
-                            <a href="img/gallery/gallery-5.jpg" class="b-gallery__item">
+                            <a data-fslightbox="gallery" href="img/gallery/gallery-5.jpg" class="b-gallery__item">
                                 <img src="img/gallery/gallery-5.jpg" alt="gallery">
 							</a>
                             <!-- /.b-gallery__item -->                        
-                            <a href="img/gallery/gallery-6.jpg" class="b-gallery__item">
+                            <a data-fslightbox="gallery" href="img/gallery/gallery-6.jpg" class="b-gallery__item">
                                 <img src="img/gallery/gallery-6.jpg" alt="gallery">
 							</a>
                             <!-- /.b-gallery__item -->                        
-                            <a href="img/gallery/gallery-7.jpg" class="b-gallery__item">
+                            <a data-fslightbox="gallery" href="img/gallery/gallery-7.jpg" class="b-gallery__item">
                                 <img src="img/gallery/gallery-7.jpg" alt="gallery">
 							</a>
                             <!-- /.b-gallery__item -->                        
-                            <a href="img/gallery/gallery-8.jpg" class="b-gallery__item">
+                            <a data-fslightbox="gallery" href="img/gallery/gallery-8.jpg" class="b-gallery__item">
                                 <img src="img/gallery/gallery-8.jpg" alt="gallery">
 							</a>
                             <!-- /.b-gallery__item -->                        
-                            <a href="img/gallery/gallery-9.jpg" class="b-gallery__item">
+                            <a data-fslightbox="gallery" href="img/gallery/gallery-9.jpg" class="b-gallery__item">
                                 <img src="img/gallery/gallery-9.jpg" alt="gallery">
                                 <span class="b-gallery__hover">Посмотреть все фотографии</span>
                                 <!-- /.b-gallery__hover -->
@@ -785,7 +785,12 @@
 			<!-- /.b-sidenav__toggle -->
 			<div class="b-sidenav__content">
 				<div class="b-sidebar__box sidebar-box">
-					<span class="b-sidebar-box__title b-sidebar-box__title_blue">Отдых в Анапе</span> <!-- /.sidebar-box__title -->
+					<div class="b-sidebar-box__title b-sidebar-box__title_blue">Отдых в Анапе
+						<a href="#" class="b-sidebar__close">Закрыть <div class="cross"><span></span><span></span></div>
+					</div> <!-- /.sidebar-box__title -->
+					
+					<!-- /.cross --></a>
+					<!-- /.b-sidebar__close -->
 					<div class="b-sidebar-box__content">
 						<div class="b-sidebar-list">
 							<div class="b-sidebar-list__item ">
@@ -854,6 +859,7 @@
 	<link rel="stylesheet" href="css/page-object-main.min.css">
 	
 	<script src="libs/tiny-slider/tiny-slider.js"></script>
+	<script src="libs/fslightbox/fslightbox.js"></script>
 	<script src="js/scripts.min.js"></script>
 
 </body>

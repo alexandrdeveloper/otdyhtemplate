@@ -169,9 +169,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             }
         });
-    } 
-
-    
+    }    
 
    
 
@@ -183,30 +181,55 @@ document.addEventListener("DOMContentLoaded", function() {
 
         })
     }
-    for (const modalToggle of document.querySelectorAll(".b-modal-close")) {
-        modalToggle.addEventListener('click', function(e) {
+    for (const modalClose of document.querySelectorAll(".b-modal-close")) {
+        modalClose.addEventListener('click', function(e) {
             e.preventDefault();
             document.querySelector('.b-modal').classList.remove('b-modal_visible');
             document.querySelector('body').classList.remove('no-scroll');
         })
     }
 
-   window.addEventListener('click', function(e) {
+   /*window.addEventListener('click', function(e) {  
+       
         for (const popupWindow of document.querySelectorAll('.b-modal-window')) {
-            if (!popup.contains(e.target) && document.querySelector('.b-modal').classList.contains('b-modal_visible')) {
+            if (!popupWindow.contains(e.target) && document.querySelectorAll('.b-modal').classList.match('b-modal_visible')) {
                 document.querySelector('.b-modal').classList.remove('b-modal_visible');
             }
-        }
-    })
+        }         
+        
+    })*/
+    function sideNavHide() {
+        document.querySelector('.b-sidenav').classList.remove('b-sidenav_opened');
+        document.querySelector('body').classList.remove('no-scroll');
+    }
+    function sideNavShow() {
+        document.querySelector('.b-sidenav').classList.toggle('b-sidenav_opened');
+        document.querySelector('body').classList.toggle('no-scroll');
+    }
 
     for (const sideNavToggle of document.querySelectorAll(".b-sidenav-toggle")) {
         sideNavToggle.addEventListener('click', function(e) {
             e.preventDefault();
-            document.querySelector('.b-sidenav').classList.toggle('b-sidenav_opened');
-            document.querySelector('body').classList.toggle('no-scroll');
+            sideNavShow();
+        })
+    }    
 
+    for (const sideNavClose of document.querySelectorAll(".b-sidebar__close")) {
+        sideNavClose.addEventListener('click', function(e) {
+            e.preventDefault();
+            sideNavHide();
         })
     }
+    window.addEventListener('click', function(e) {
+        for (const sideNavWindow of document.querySelectorAll('.b-sidenav')) {
+            if (!sideNavWindow.contains(e.target)) {
+                sideNavHide();
+            }
+        }
+    })
+
+
+    
 
     
     for (const objectImages of document.querySelectorAll('.b-gallery__item img')){
