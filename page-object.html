@@ -28,7 +28,7 @@
 
 <body class="b-page">
 	<div class="b-page__wrapper">
-		<header class="b-header">
+		<header class="b-header ">
 			<div class="b-headline">
 				<div class="container">
 					<div class="b-headline__row">
@@ -125,7 +125,7 @@
 					</div>
 					<!-- /.b-object-hero__headline -->
 					<div class="p-object-nav">
-						<a href="#gallery" class="p-object-nav__item p-object-nav__item_active">
+						<a href="#gallery" class="p-object-nav__item">
 							<div class="p-object-nav__label">
 								<div class="p-object-nav__icon">
 									<img src="img/Icons/photos.svg" alt="Фотографии">
@@ -223,77 +223,62 @@
 			<section class="b-gallery navbar-switch" id="gallery">
 				<div class="container">
 					<div class="b-theme-box b-theme-box_shadow">
-						<div class="b-gallery__grid">
-							<div class="b-gallery__row">
-								<div class="b-gallery__col-4">
-									<div class="b-gallery__item">
-										<img src="img/gallery/gallery-1.jpg" alt="gallery">
-									</div>
-									<!-- /.b-gallery__item -->
-									<div class="b-gallery__item">
-										<img src="img/gallery/gallery-2.jpg" alt="gallery">
-									</div>
-									<!-- /.b-gallery__item -->
-								</div>
-								<!-- /.b-gallery__col-4 -->
-								<div class="b-gallery__col-8">
-									<div class="b-gallery__item">
-										<img src="img/gallery/gallery-3.jpg" alt="gallery">
-									</div>
-									<!-- /.b-gallery__item -->
-								</div>
-								<!-- /.b-gallery__col-8 -->
-							</div>
-							<!-- /.b-gallery__row -->
-							<div class="b-gallery__row">
-								<div class="b-gallery__col-2">
-									<div class="b-gallery__item">
-										<img src="img/gallery/gallery-4.jpg" alt="gallery">
-									</div>
-									<!-- /.b-gallery__item -->
-								</div>
-								<!-- /.b-gallery__col-2 -->
-								<div class="b-gallery__col-2">
-									<div class="b-gallery__item">
-										<img src="img/gallery/gallery-5.jpg" alt="gallery">
-									</div>
-									<!-- /.b-gallery__item -->
-								</div>
-								<!-- /.b-gallery__col-2 -->
-								<div class="b-gallery__col-2">
-									<div class="b-gallery__item">
-										<img src="img/gallery/gallery-6.jpg" alt="gallery">
-									</div>
-									<!-- /.b-gallery__item -->
-								</div>
-								<!-- /.b-gallery__col-2 -->
-								<div class="b-gallery__col-2">
-									<div class="b-gallery__item">
-										<img src="img/gallery/gallery-7.jpg" alt="gallery">
-									</div>
-									<!-- /.b-gallery__item -->
-								</div>
-								<!-- /.b-gallery__col-2 -->
-								<div class="b-gallery__col-2">
-									<div class="b-gallery__item">
-										<img src="img/gallery/gallery-8.jpg" alt="gallery">
-									</div>
-									<!-- /.b-gallery__item -->
-								</div>
-								<!-- /.b-gallery__col-2 -->
-								<div class="b-gallery__col-2">
-									<div class="b-gallery__item">
-										<img src="img/gallery/gallery-9.jpg" alt="gallery">
-										<a href="#" class="b-gallery__hover">Посмотреть все фотографии</a>
-										<!-- /.b-gallery__hover -->
-									</div>
-									<!-- /.b-gallery__item -->
-								</div>
-								<!-- /.b-gallery__col-2 -->
-							</div>
-							<!-- /.b-gallery__row -->
+						<div class="b-gallery__grid">							
+                            <a href="img/gallery/gallery-1.jpg" class="b-gallery__item">
+                                <img src="img/gallery/gallery-1.jpg" alt="gallery">
+							</a>
+                            <!-- /.b-gallery__item -->
+                            <a href="img/gallery/gallery-3.jpg" class="b-gallery__item">
+                                <img src="img/gallery/gallery-3.jpg" alt="gallery">
+							</a>
+                            <!-- /.b-gallery__item --> 
+                            <a href="img/gallery/gallery-2.jpg" class="b-gallery__item">
+                                <img src="img/gallery/gallery-2.jpg" alt="gallery">
+							</a>
+                            <!-- /.b-gallery__item -->
+                        
+                                          
+                    
+                            <a href="img/gallery/gallery-4.jpg" class="b-gallery__item">
+                                <img src="img/gallery/gallery-4.jpg" alt="gallery">
+                            </a>
+                            <!-- /.b-gallery__item -->                      
+                        
+                            <a href="img/gallery/gallery-5.jpg" class="b-gallery__item">
+                                <img src="img/gallery/gallery-5.jpg" alt="gallery">
+							</a>
+                            <!-- /.b-gallery__item -->                        
+                            <a href="img/gallery/gallery-6.jpg" class="b-gallery__item">
+                                <img src="img/gallery/gallery-6.jpg" alt="gallery">
+							</a>
+                            <!-- /.b-gallery__item -->                        
+                            <a href="img/gallery/gallery-7.jpg" class="b-gallery__item">
+                                <img src="img/gallery/gallery-7.jpg" alt="gallery">
+							</a>
+                            <!-- /.b-gallery__item -->                        
+                            <a href="img/gallery/gallery-8.jpg" class="b-gallery__item">
+                                <img src="img/gallery/gallery-8.jpg" alt="gallery">
+							</a>
+                            <!-- /.b-gallery__item -->                        
+                            <a href="img/gallery/gallery-9.jpg" class="b-gallery__item">
+                                <img src="img/gallery/gallery-9.jpg" alt="gallery">
+                                <span class="b-gallery__hover">Посмотреть все фотографии</span>
+                                <!-- /.b-gallery__hover -->
+                            </a>
+                            <!-- /.b-gallery__item -->
+								
+							
 						</div>
 						<!-- /.b-gallery__grid -->
+						<div class="gallery-controls">
+							<button class="gallery-controls__item gallery-controls__item_prev">
+								<img src="img/Icons/arrow_filter_left.svg" alt="prev">
+							</button>
+							<button class="gallery-controls__item gallery-controls__item_next">
+								<img src="img/Icons/arrow_filter_right.svg" alt="next">
+							</button>
+						</div>
+						<!-- /.gallery-controls -->
 					</div>
 					<!-- /.b-theme-box b-theme-box_shadow -->
 				</div>
@@ -410,7 +395,7 @@
 							<div class="b-table__row">
 								<div class="b-table__cell">Контакты</div>
 								<!-- /.b-table__cell -->
-								<div class="b-table__cell">+7 (918) 668-74-70 - Сергей +7 (86133) 7-35-02 +7 (985) 298-65-18 +7 (499) 204-95-22</div>
+								<div class="b-table__cell">+7 (918) 668-74-70 - Сергей<br> +7 (86133) 7-35-02 +7 (985) 298-65-18 +7 (499) 204-95-22</div>
 								<!-- /.b-table__cell -->
 							</div>
 							<!-- /.b-table__row -->
@@ -865,10 +850,10 @@
 
 	
 
-	<link rel="stylesheet" href="libs/yalb/yalb.min.css">
+	<link rel="stylesheet" href="libs/tiny-slider/tiny-slider.css">
 	<link rel="stylesheet" href="css/page-object-main.min.css">
 	
-	<script src="libs/yalb/yalb.min.js"></script>
+	<script src="libs/tiny-slider/tiny-slider.js"></script>
 	<script src="js/scripts.min.js"></script>
 
 </body>

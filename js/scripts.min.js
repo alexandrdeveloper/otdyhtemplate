@@ -145,7 +145,35 @@ document.addEventListener("DOMContentLoaded", function() {
 
 /** Object Page Navbar Swich End **/
 
+/** Object Page Mobile Slider **/
+    let arrowLeft = document.querySelector('.gallery-controls__item_prev');
+    let arrowRight = document.querySelector('.gallery-controls__item_next');
 
+    if (window.innerWidth < 768) {
+        var gallerySlider = tns({
+            container: '.b-gallery__grid',
+            items: 1,
+            slideBy: 'page',
+            autoplay: true,
+            nav: false,
+            edgePadding: 22,            
+            center: true, 
+            prevButton: arrowLeft,
+            nextButton: arrowRight,         
+            responsive: {
+                420: {
+                    fixedWidth: 340,
+                },
+                768: {
+                    disable: true,
+                }
+            }
+        });
+    } 
+
+    
+
+   
 
     for (const modalToggle of document.querySelectorAll(".modal-toggle")) {
         modalToggle.addEventListener('click', function(e) {
@@ -180,10 +208,11 @@ document.addEventListener("DOMContentLoaded", function() {
         })
     }
 
-    var images = document.querySelectorAll('.b-gallery__item img');
-    for (const objectImages of document.querySelectorAll('.b-gallery__item>img')){
-        objectImages.addEventListener('click', function(){
-            yalb(images);
+    
+    for (const objectImages of document.querySelectorAll('.b-gallery__item img')){
+        objectImages.addEventListener('click', function(e){
+            e.preventDefault();
+            yalb(objectImages);
         });
     }
 
