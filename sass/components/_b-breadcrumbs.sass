@@ -1,0 +1,77 @@
+.b-breadcrumbs 
+    padding-top: 31px
+    padding-bottom: 22px
+    @media screen and (max-width: 767px)
+        padding-top: 20px
+    &__row 
+        display: flex
+        flex-direction: row 
+        justify-content: space-between
+        align-items: center
+        width: 100%
+        font-size: 14px 
+        @media screen and (max-width: 767px)
+            justify-content: center
+            font-size: 12px
+    &__list 
+        font-family: 'opensans'
+        font-weight: 400
+               
+        display: flex 
+        flex-direction: row 
+        justify-content: flex-start 
+        align-items: center
+        @media screen and (max-width: 767px)
+            display: none
+    &__item 
+        display: flex 
+        flex-direction: row 
+        justify-content: flex-start 
+        align-items: center
+        text-decoration: none 
+        color: #0284a8 
+        transition: .1s ease-in
+        &::after 
+            content: ''
+            display: block
+            width: 9px
+            height: 9px
+            background-image: url('../img/Icons/bread.svg')
+            background-size: 100% auto 
+            background-position: center center
+            background-repeat: no-repeat
+            margin: 0 7px 
+        &:hover 
+            color: $accent
+
+        &_current
+            color: #73a1ae
+            &::after 
+                display: none
+            &:hover 
+                color: #73a1ae
+    &__return 
+        font-family: 'opensansbold'
+        font-weight: 700        
+        color: #0284a8 
+        text-decoration: none
+        transition: .2s ease-in         
+        &::before 
+            content: ''
+            display: inline-block
+            background-image: url('../img/Icons/back.svg')
+            background-position: center center
+            background-size: 100% auto
+            width: 20px
+            height: 10px
+            margin-right: 11px 
+            transition: .2s ease-in 
+            @media screen and (max-width: 767px)
+                width: 16px 
+                
+
+        &:hover 
+            color: $accent 
+            &::before 
+                transform: translateX(-5px)
+

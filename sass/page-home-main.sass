@@ -1,0 +1,77 @@
+@import "vars"
+@import "components/_b-main"
+@import "components/_b-card"
+@import "components/_b-article"
+@import "components/_b-subscribe"
+@import "components/_b-footer"
+.new 
+    &-grid 
+        display: flex
+        flex-direction: row 
+        flex-wrap: wrap 
+        align-items: flex-start
+        justify-content: space-between
+        @media screen and (max-width: 768px)
+            flex-direction: column 
+            align-items: center
+        &__item 
+            width: 33%
+            @media screen and (max-width: 1200px)
+                width: calc(100% / 3 - 15px)
+            @media screen and (max-width: 991px)
+                width: calc(50% - 15px)
+            @media screen and (max-width: 768px)
+                width: 98%
+                max-width: 340px
+
+.b-page 
+    &::after 
+        content: ''
+        display: block
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        height: 1000vh 
+        width: 1920px
+        background-image: url('../img/pixelperfect/home.png')
+        background-size: 100% auto 
+        background-position: center top 
+        background-repeat: no-repeat 
+        display: none
+        
+        
+        
+.b-page__wrapper 
+    position: relative
+    opacity: 1
+    z-index: 2 
+
+h2 
+    display: block
+    text-align: center
+    font-size: 36px
+    font-family: 'lora-bold'
+    color: #3a3a3a
+    position: relative
+    margin-bottom: 46px
+    &::after 
+        content: ''
+        display: block
+        width: 109px
+        height: 14px
+        background-image: url('../img/Icons/waves_1.svg')
+        background-size: 100% 100%
+        background-repeat: no-repeat
+        background-position: center
+        margin: 0 auto
+        margin-top: 22px
+    @media screen and (max-width: 991px)
+        margin-bottom: 40px
+    @media screen and (max-width: 768px)
+        font-size: 24px
+        line-height: 30px
+        margin-bottom: 35px
+        &::after
+            width: 70px 
+            margin-top: 10px

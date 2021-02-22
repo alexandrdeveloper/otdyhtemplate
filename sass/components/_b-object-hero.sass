@@ -1,0 +1,156 @@
+.b-object-hero 
+    background: #f8fcfd
+    padding-top: 22px
+    @media screen and (max-width: 767px)
+        padding-top: 18px
+    &__headline 
+        margin-bottom: 14px
+        h1 
+            display: block
+            font-size: 30px
+            font-family: 'lora-bold'
+            color: #0284a8
+            line-height: 1
+            margin-top: 0
+            margin-bottom: 2px
+            @media screen and (max-width: 767px)
+                font-size: 20px
+                text-align: center
+                line-height: 26px
+    &__location 
+        color: #919292
+        font-size: 12px
+        line-height: 24px
+        font-weight: 400
+        font-family: 'opensans'
+        position: relative 
+        display: flex
+        flex-direction: row 
+        align-items: center
+        @media screen and (max-width: 767px)
+            justify-content: center
+        &::before 
+            content: ''
+            display: inline-block
+            width: 13px
+            height: 13px
+            background-image: url('../img/Icons/location.svg')
+            background-size: 100% auto 
+            background-position: center center
+            background-repeat: no-repeat
+            margin-right: 10px 
+.b-object-navbar 
+    @media screen and (max-width: 767px)
+        padding-top: 56px
+
+    &_sticky 
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        z-index: 14
+        box-shadow: 0 11px 18px rgba(46, 59, 59, 0.06)
+        background-color: #f8fcfc 
+        animation: sticky-show .3s 
+        @media screen and (max-width: 991px)
+            top: 56px 
+            height: 54px
+        @media screen and (max-width: 576px)
+            height: 40px
+        .b-breadcrumbs__return
+            display: none
+        .b-object-hero 
+            padding-top: 0
+            .container
+                position: relative
+                @media screen and (max-width: 767px)
+                    top: -54px
+                @media screen and (max-width: 576px) 
+                    width: 100%
+                    max-width: 100%
+        .p-object-nav
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            display: flex
+            flex-direction: row
+            justify-content: flex-end
+            align-items: center
+            width: auto
+            @media screen and (max-width: 991px)
+                justify-content: space-between
+                width: 100%
+                height: 54px
+            @media screen and (max-width: 576px)
+                height: 40px
+        .p-object-nav__item
+            span 
+                display: inline-block
+                max-width: 0
+                overflow: hidden
+                transition: 0 
+                color: $accent
+        .p-object-nav__item_active
+            span 
+                display: inline-block
+                overflow: hidden
+                max-width: 150px 
+                transition: .3s ease-in
+
+        .p-object-nav__item:not(.p-object-nav__item_active) 
+            height: 100%
+            display: inline-block 
+            width: 77px 
+            @media screen and (max-width: 991px)
+                width: 100%
+                height: 100%
+            .p-object-nav__label 
+                height: 100%
+                
+                    
+
+            .p-object-nav__icon
+                
+                margin-right: 0
+        .p-object-nav__item_active
+            @media screen and (max-width: 991px)
+                height: 100%
+            .p-object-nav__label
+                padding-left: 32px 
+                padding-right: 32px 
+                height: 100%
+                @media screen and (max-width: 576px)
+                    padding-left: 6px
+                    padding-right: 6px
+        .b-object-hero__location
+            display: none
+        .b-object-hero__headline 
+            margin-bottom: 0
+            padding-top: 22px
+            padding-bottom: 34px
+            @media screen and (max-width: 991px)
+                display: none
+            h1
+                font-size: 20px
+        .b-breadcrumbs
+            padding-top: 0
+            @media screen and (max-width: 991px)
+                display: none
+            .container 
+                position: absolute
+                bottom: 0
+                left: 0
+                right: 0
+        .b-breadcrumbs__row
+            position: relative
+            
+        .b-breadcrumbs__list
+            position: absolute
+            bottom: 18px
+            left: 0
+@keyframes sticky-show
+    0% 
+        top: -120%
+    100% 
+        top: 0

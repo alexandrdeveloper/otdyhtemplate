@@ -71,6 +71,8 @@ document.addEventListener("DOMContentLoaded", function() {
         })
     }
 
+    
+
     function sideScroll(element,direction,speed,distance,step){
         scrollAmount = 0;
         var slideTimer = setInterval(function(){
@@ -84,6 +86,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 window.clearInterval(slideTimer);
             }
         }, speed);
+    }
+
+    for (const distance of document.querySelectorAll('.distance-toggle')) {
+        distance.addEventListener('click', function(e) {
+            e.preventDefault();
+            let distanceList = this.parentNode.querySelector('.b-catalog__distance');
+
+            distanceList.classList.toggle('b-catalog__distance_open');
+        })
     }
     
 });

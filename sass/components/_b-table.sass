@@ -1,0 +1,46 @@
+.b-table 
+    display: table
+    width: 100%
+    margin-bottom: 26px
+    &__row 
+        display: table-row
+    &__cell 
+        display: table-cell 
+        font-family: 'opensans'
+        font-size: 14px
+        color: #3a3a3a
+        padding: 9px 0
+        border-bottom: 1px solid #dee2e6
+        line-height: 1.24 
+        @media screen and (max-width: 767px)
+            font-size: 12px
+        &:first-child 
+            font-family: 'opensansbold'
+            width: 26.4%
+            @media screen and (max-width: 767px)
+                width: 124px
+                padding-right: 10px
+        ul 
+            margin-top: 0
+            margin-bottom: 0
+            li 
+                margin-bottom: 19px
+                padding-left: 29px
+                &:last-child
+                    margin-bottom: 0
+        p, p:not(:last-child) 
+            margin-bottom: 0
+            line-height: 36px 
+            @media screen and (max-width: 767px)
+                font-size: 12px
+                line-height: 18px
+           
+        &_pt0 
+            padding-top: 0 
+            @media screen and (max-width: 767px)
+                padding-top: 9px
+        &_pb0 
+            padding-bottom: 0
+            @media screen and (max-width: 767px)
+                padding-bottom: 9px
+        

@@ -1,0 +1,39 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+@import "normalize"
+
+.container 
+    display: block
+    box-sizing: border-box
+    width: 100%
+    max-width: 1200px
+    margin-left: auto 
+    margin-right: auto
+    @media screen and (max-width: 1200px)
+        max-width: 980px
+    @media screen and (max-width: 991px)
+        max-width: 720px
+    @media screen and (max-width: 768px)
+        width: 94%
+        max-width: 540px
+    @media screen and (max-width: 420px)
+        width: 98%
+        max-width: 380px
+
+* 
+    box-sizing: border-box
+ 
+button, input[type="submit"] 
+    cursor: pointer
+button, input, textarea
+    &:focus 
+        outline: none 
+p 
+    font-size: 14px
+    font-weight: 400
+    font-family: 'opensans'
+    line-height: 24px
+body 
+    &.no-scroll
+        overflow-y: hidden

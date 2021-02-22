@@ -1,0 +1,165 @@
+.b-modal 
+    position: fixed
+    overflow-y: auto    
+    top: 0
+    left: 0 
+    right: 0
+    bottom: 0    
+    z-index: 20
+    background-color: rgba(#000, .3)
+    transform: scale(0)
+    opacity: 0
+    transition: opacity .2s ease-in
+    &_visible 
+        transform: scale(1)
+        opacity: 1
+    @media screen and (max-width: 1920px)
+        padding-top: 50px
+        padding-bottom: 50px 
+    @media screen and (max-width: 576px)
+        padding-top: 0
+        padding-bottom: 0
+
+    &-wrap 
+        width: 100%
+        min-height: 100vh
+        display: flex
+        justify-content: center
+        align-items: center
+
+    &-window 
+        background-color: #fff
+        padding: 37px 60px
+        position: relative 
+        width: 100%
+        box-sizing: border-box
+        max-width: 572px 
+        @media screen and (max-width: 576px) 
+            padding: 35px 25px
+        &__headline  
+            position: relative
+            width: 100% 
+            margin-bottom: 26px
+            span 
+                color: #0284a8
+                font-family: 'lora-bold'
+                font-size: 24px 
+                display: block
+                width: 100%
+                line-height: 1 
+                @media screen and (max-width: 767px)
+                    font-size: 18px
+                &::after 
+                    content: ''
+                    display: block
+                    width: 100% 
+                    height: 11px
+                    background-image: url('../img/Icons/waves_3.svg')
+                    background-size: auto 50% 
+                    background-repeat: no-repeat
+                    background-position: center center 
+                    margin-top: 25px
+    &-close 
+        width: 18px
+        height: 18px
+        background: transparent 
+        border: none
+        position: absolute 
+        top: 39px
+        right: 60px 
+        @media screen and (max-width: 576px)
+            right: 25px
+        span 
+            display: block
+            width: 22px
+            height: 2px
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%) rotate(45deg)
+            background-color: #afafaf
+            &:nth-child(2)
+               transform: translate(-50%, -50%) rotate(-45deg) 
+        &:hover 
+            span 
+                background: #0284a8
+    &-title 
+        font-size: 30px
+        color: #0284a8
+        font-weight: 700
+        font-family: 'lora-bold'
+        display: block
+        margin-bottom: 6px 
+        @media screen and (max-width: 767px)
+            font-size: 20px
+    &-subtitle
+        font-size: 14px
+        color: #000000
+        font-family: 'opensans'
+        font-weight: 400
+        display: block
+        
+    &-form 
+        margin-top: 40px
+        &__row 
+            display: flex 
+            flex-direction: row 
+            justify-content: space-between
+
+            margin-bottom: 15px
+            @media screen and (max-width: 576px)
+                flex-wrap: wrap
+        &__item 
+            display: flex
+            flex-direction: column
+            width: 100%
+            label 
+                display: block
+                font-family: 'opensansbold'
+                font-weight: 700
+                color: #000000
+                font-size: 14px
+                margin-bottom: 15px
+            input, textarea 
+                max-width: 100%
+                border: 1px solid #c6dada
+                font-family: 'opensans'
+                font-size: 14px
+                font-weight: 400
+                color: #000000
+                &:placeholder 
+                    color: #c2cccc
+            input 
+                height: 48px
+                padding: 0 14px
+            textarea
+                padding: 14px
+                height: 120px
+                margin-bottom: 20px
+            &_col-6 
+                width: 50% 
+                @media screen and (max-width: 576px)
+                    width: 100%
+                &:first-child 
+                    padding-right: 15px
+                    @media screen and (max-width: 576px)
+                        padding-right: 0
+                        margin-bottom: 15px
+                &:last-child 
+                    padding-left: 15px
+                    @media screen and (max-width: 576px)
+                        padding-left: 0
+    &-button 
+        height: 48px
+        background-color: #9fb84e
+        border-radius: 6px
+        width: 100%
+        max-width: 190px 
+        font-family: 'opensansbold'
+        font-size: 14px
+        font-weight: 700
+        border: none
+        color: #ffffff
+        &:hover 
+            background-color: #0284a8
+

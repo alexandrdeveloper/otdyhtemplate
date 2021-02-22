@@ -1,0 +1,223 @@
+@import "vars"
+@import "components/_b-main"
+@import "components/_b-catalog"
+@import "components/_b-sidebar"
+@import "components/_b-sidenav"
+@import "components/_b-subscribe"
+@import "components/_b-footer"
+.b-page__wrapper
+    background-color: #f8fcfc
+.b-main 
+    padding-bottom: 100px
+
+.content 
+    margin-left: 30px
+    width: 100%
+    box-sizing: border-box 
+
+h1 
+    color: #0284a8
+    font-size: 30px
+    font-family: 'lora-bold'
+    display: block
+    text-align: left 
+    margin-top: 10px
+    margin-bottom: 20px
+
+.content-filter
+    margin-bottom: 20px
+    span 
+        display: block
+        text-align: left 
+        margin-bottom: 7px
+        font-family: 'opensans'
+        font-size: 12px
+        color: #919292
+        font-weight: 400
+    &__list 
+        display: flex
+        flex-direction: row 
+        justify-content: flex-start
+        align-items: center
+        flex-wrap: wrap
+    &__toggle 
+        font-family: 'opensansbold'
+        font-size: 12px 
+        padding: 7px
+        min-width: 117px 
+        text-align: center
+        border-radius: 10px
+        color: #0284a8 
+        border: 1px solid #2cd0b1
+        background: transparent
+        margin-right: 3px 
+        margin-bottom: 3px
+        transition: .2s ease-in
+        &_active,
+        &:hover 
+            background-color: #0284a8
+            color: #ffffff
+            border-color: #0284a8
+
+.b-subscribe
+    padding-top: 260px
+
+
+
+@media screen and (max-width: 991px)
+    .b-sidebar // !! Warning
+        display: none
+    .b-breadcrumbs
+        display: none
+    .content
+        margin-left: 0
+        padding-top: 68px
+        h1 
+            text-align: center 
+    .content-filter
+        position: relative
+        width: calc(100% - 29px * 2)
+        margin-left: auto
+        margin-right: auto
+    .content-filter__list
+        display: flex 
+        flex-direction: row 
+        justify-content: flex-start
+        
+        flex-wrap: nowrap
+        overflow-x: auto
+        width: 100% 
+        
+        &::-webkit-scrollbar
+            display: none
+    .content-filter__toggle
+        border-radius: 0
+        margin-right: 0
+        padding-left: 12px
+        padding-right: 12px
+        white-space: nowrap
+        width: auto
+        min-width: fit-content
+        margin-bottom: 0 
+        border-color: #2cd0b1
+        &_active 
+            background-color: #2cd0b1
+    .content-filter-controls__arrow
+        position: absolute
+        bottom: 0 
+        height: 29px
+        width: 29px
+        background-color: #2cd0b1
+        border: none
+        display: flex
+        justify-content: center
+        align-items: center
+        img 
+            display: block
+            height: 14px
+        &_left
+            right: 100%
+        &_right 
+            left: 100%
+        
+
+    
+    .b-catalog
+        display: flex
+        flex-direction: row 
+        flex-wrap: wrap
+        justify-content: flex-start
+        align-items: stretch
+        position: relative
+
+    .b-catalog-item
+        flex-direction: column
+        justify-content: flex-start
+        align-items: center
+        width: calc(50% - 9px) 
+        margin-bottom: 18px       
+        &:nth-child(odd)
+            margin-right: auto
+            
+    .b-catalog-item__image
+        width: 100%
+        margin-bottom: 23px
+        margin-right: 0 
+        min-height: 230px
+    .b-catalog-item__image img
+        width: 100% 
+        height: auto
+    .b-catalog-type
+        font-size: 12px
+        
+    .b-catalog-type,
+    .b-catalog-location
+        margin-bottom: 8px
+    .b-catalog-comfort__title
+        margin-bottom: 6px
+    .b-catalog-extras
+        width: 100%
+        flex-direction: row-reverse
+        justify-content: space-between
+        align-items: center
+        padding-top: 20px
+        min-height: 0
+    .b-catalog-item__main
+        margin-bottom: auto
+    .b-catalog-extras-list
+        padding-left: 0
+        padding-top: 0
+    .b-catalog-extras-list__item
+        &:last-child
+            margin-bottom: 0
+    .b-catalog-tel__box
+        bottom: 100%
+        top: auto
+        margin-bottom: 10px
+    .b-catalog-list__more
+        position: absolute
+        top: 100%
+        left: 50%
+        transform: translateX(-50%)
+        padding-left: 20px
+        padding-right: 20px
+        width: 100%
+        text-align: center
+        max-width: 340px
+    .content-filter span
+        text-align: center
+@media screen and (min-width: 992px) and (max-width: 1200px)
+    .b-sidebar 
+        max-width: 300px
+@media screen and (min-width: 992px)
+    .b-sidenav
+        display: none
+@media screen and (max-width: 768px)
+    
+    .b-main
+        .container 
+            max-width: 760px
+@media screen and (min-width: 690px)
+    .content-filter-controls__arrow
+        display: none
+@media screen and (max-width: 690px)
+    .b-catalog
+        flex-direction: column 
+        align-items: flex-start
+    .b-catalog-item
+        width: 100%
+        max-width: 340px
+        margin-left: auto 
+        margin-right: auto
+
+@media screen and (max-width: 360px)
+    .b-catalog-extras
+        width: 100%
+        flex-direction: column-reverse
+        justify-content: space-between
+        align-items: flex-start
+    .b-catalog-tel,
+    .b-catalog-tel__toggle
+        width: 100%
+    .b-catalog-tel
+        margin-top: 20px

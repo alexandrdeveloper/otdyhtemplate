@@ -1,0 +1,132 @@
+@media screen and (max-width: 991px)
+    .b-page__wrapper
+        position: relative
+        &::after 
+            content: ''
+            display: block
+            position: fixed
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            background-color: rgba(#000, .3)
+            z-index: 4
+            transform: translateX(-102%)
+            opacity: 0
+            transition: opacity .3s ease-in
+        &_shadow
+            &::after
+                transform: translateX(0)
+                opacity: 1
+    .b-header
+        position: fixed
+        top: 56px
+        left: -100%
+        bottom: 0
+        width: 100%
+        max-width: 310px 
+        padding-top: 35px 
+        box-sizing: border-box
+        overflow-y: auto 
+        transition: .3s ease-in 
+        z-index: 30  
+        background-color: #fff        
+        &_open
+            left: 0
+        
+            
+    .b-logo
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        transform: none
+        height: 57px 
+        box-sizing: border-box
+        display: flex
+        justify-content: center
+        align-items: center
+        z-index: 10
+        background-color: #fff 
+        box-shadow: 0 3px 46px rgba(18, 63, 82, 0.07)
+        img 
+            width: 41px
+            height: auto   
+        
+    .menu-toggle,
+    .search-toggle 
+        display: block
+        position: fixed
+        top: 15px        
+        z-index: 11
+    .menu-toggle
+        left: 27px
+    .search-toggle
+        right: 27px
+
+    .b-headline-menu
+        display: flex
+        flex-direction: column 
+        justify-content: flex-start
+        align-items: flex-start
+        min-width: 100%
+        box-sizing: border-box
+    .b-headline
+        padding: 0
+    .b-headline__row
+        height: auto
+    .b-header__menu
+        position: relative
+        transform: none 
+        top: 0
+    .b-menu__list
+        display: flex
+        flex-direction: column 
+        justify-content: flex-start
+        align-items: flex-start
+        height: auto
+        background-color: transparent
+        box-sizing: border-box
+    .b-headline-menu__link,
+    .b-menu__link        
+        color: #8fa0a4 
+        display: block
+        width: 100%
+        font-size: 15px
+        font-weight: 400
+        font-family: 'opensans'
+        padding: 16px 28px 
+        box-sizing: border-box
+        &:hover 
+            background-color: rgba(#a4be3e, .1)
+            color: #a9c451
+    .b-menu__link:not(:last-child)::after
+        display: none
+
+    .b-headline-menu__item:not(:last-child)
+        margin-right: 0
+    .b-headline-menu__item
+        display: block
+        width: 100%
+        box-sizing: border-box
+    .b-search
+        position: fixed
+        top: 9px
+        left: 50%
+        right: auto
+        transform: translateX(-50%)
+        z-index: 30  
+        display: none  
+        border-bottom: 1px solid #a4be3e
+        width: 60%        
+        input 
+            box-sizing: border-box 
+            padding-left: 10px
+            padding-right: 10px  
+        &_visible
+            display: block
+    .b-search__input
+        border: none 
+        background: #fff 
+    .b-search__submit
+        visibility: hidden

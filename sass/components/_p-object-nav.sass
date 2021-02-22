@@ -1,0 +1,112 @@
+.p-object-nav 
+    display: table
+    table-layout: fixed
+    width: 100%
+    &__item 
+        display: table-cell
+        text-decoration: none
+        width: auto 
+        &:not(:last-child)
+            padding-right: 4px
+    &__label 
+        display: flex
+        flex-direction: row 
+        align-items: center
+        justify-content: center
+        width: 100%
+        background-color: #eef4f4
+        border-radius: 2px 2px 0 0  
+        padding: 16px 0px  
+        span 
+            color: #000000
+            font-size: 14px
+            font-weight: 700
+            font-family: 'opensansbold'
+    &__icon 
+        height: 22px
+        width: 22px
+        margin-right: 9px   
+        position: relative
+        img 
+            display: block
+            position: absolute
+            top: 0
+            left: 0
+            width: 100% 
+            &.hover 
+                opacity: 0
+.p-object-nav__item_active
+    .p-object-nav__label
+        background-color: #fff
+        span 
+            color: $accent
+            transition: .3s
+        .p-object-nav__icon
+            img 
+                opacity: 0
+            img.hover 
+                opacity: 1
+.p-object-nav__label
+    &:hover 
+        background-color: #fff
+        span
+            color: $accent
+        .p-object-nav__icon
+            img 
+                opacity: 0
+            img.hover 
+                opacity: 1
+.p-object-nav__item_active     
+
+@media screen and (max-width: 991px)
+    .p-object-nav
+        display: flex
+        flex-direction: row 
+        flex-wrap: nowrap
+        justify-content: space-between
+    .p-object-nav__item 
+        display: block
+    .p-object-nav__item:not(.p-object-nav__item_active)
+        min-width: 36px
+        
+        
+        width: 100%        
+        .p-object-nav__icon
+            margin-right: 0
+        span 
+            max-width: 0 
+            overflow: hidden
+            
+    .p-object-nav__label
+        padding-left: 8px
+        padding-right: 8px
+    
+@media screen and (max-width: 991px) and (min-width: 768px)
+    .p-object-nav__item_active
+        .p-object-nav__label
+            padding-left: 24px
+            padding-right: 24px
+@media screen and (max-width: 460px)
+    .p-object-nav__label
+        padding: 8px
+        span 
+            font-size: 12px
+    .p-object-nav__icon
+        margin-right: 4px
+    .p-object-nav__icon
+        width: 19px
+        height: 19px
+@media screen and (max-width: 360px)
+    .p-object-nav__icon
+        width: 12px
+        height: 12px
+    .p-object-nav__item:not(.p-object-nav__item_active)
+        min-width: 0
+    .p-object-nav__label
+        padding: 6px 2px 
+        span
+            font-size: 9px
+
+               
+        
+            

@@ -1,0 +1,194 @@
+
+.b-gallery
+    &__grid 
+        &::after 
+            content: ''
+            display: block
+            clear: both
+    &__item 
+        overflow: hidden
+        position: relative 
+        display: block
+        
+        img 
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            min-width: 100%
+        &:nth-child(1)
+            width: calc(100% / 3 - 12px)
+            margin-right: 12px
+            margin-bottom: 12px
+            float: left
+            height: 226px 
+            @media screen and (max-width: 991px) and (min-width: 768px)
+                height: 113px
+                width: calc(100% / 3 - 6px)
+                margin-right: 6px
+                margin-bottom: 6px
+        &:nth-child(2)
+            width: calc(100% / 3 *2)
+            float: right
+            height: calc(226px * 2 + 12px)
+            margin-bottom: 12px
+            @media screen and (max-width: 991px) and (min-width: 768px)
+                height: calc(113px * 2 + 6px)
+                margin-bottom: 6px
+        &:nth-child(3)
+            width: calc(100% / 3 - 12px)
+            margin-right: 12px
+            margin-bottom: 12px
+            float: left
+            height: 226px 
+            @media screen and (max-width: 991px) and (min-width: 768px)
+                height: 113px
+                width: calc(100% / 3 - 6px)
+                margin-right: 6px
+                margin-bottom: 6px
+        &:nth-child(4)
+            width: calc(100% / 6 - (12px / 2))
+            margin-right: 6px
+            float: left
+            height: 125px
+            display: inline-block
+            @media screen and (max-width: 991px) and (min-width: 768px)
+                height: 72px
+                width: calc(100% / 6 - 6px)
+                margin-right: 3px
+            
+        &:nth-child(5)
+            width: calc(100% / 6 - 12px)
+            margin-right: 6px
+            margin-left: 6px
+            float: left
+            height: 125px
+            display: inline-block
+            @media screen and (max-width: 991px) and (min-width: 768px)
+                height: 72px
+                width: calc(100% / 6 - 6px)
+                margin-right: 3px
+                margin-left: 3px
+        &:nth-child(6)
+            width: calc(100% / 6 - 12px)
+            margin-right: 6px
+            margin-left: 6px
+            float: left
+            height: 125px
+            display: inline-block
+            @media screen and (max-width: 991px) and (min-width: 768px)
+                height: 72px
+                width: calc(100% / 6 - 6px)
+                margin-right: 3px
+                margin-left: 3px
+        &:nth-child(7)
+            width: calc(100% / 6 - 12px)
+            margin-right: 6px
+            margin-left: 6px
+            float: left
+            height: 125px
+            display: inline-block
+            @media screen and (max-width: 991px) and (min-width: 768px)
+                height: 72px
+                width: calc(100% / 6 - 6px)
+                margin-right: 3px
+                margin-left: 3px
+        &:nth-child(8)
+            width: calc(100% / 6 - 12px)
+            margin-right: 6px
+            margin-left: 6px
+            float: left
+            height: 125px
+            display: inline-block
+            @media screen and (max-width: 991px) and (min-width: 768px)
+                height: 72px
+                width: calc(100% / 6 - 6px)
+                margin-right: 3px
+                margin-left: 3px
+        &:nth-child(9)
+            width: calc(100% / 6 - 6px)
+            margin-left: 6px
+            float: right
+            height: 125px
+            display: inline-block
+            text-decoration: none 
+            @media screen and (max-width: 991px) and (min-width: 768px)
+                height: 72px 
+                margin-left: 3px
+            
+    &__hover 
+        position: relative
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: rgba(#1b8dad, .8)
+        color: #fff 
+        display: flex
+        justify-content: center
+        align-items: center
+        text-align: center
+        font-family: 'opensansbold'
+        font-size: 14px
+        line-height: 18px
+        text-decoration: none
+        @media screen and (max-width: 991px) and (min-width: 768px)
+            font-size: 10px
+            line-height: 14px
+        @media screen and (max-width: 767px)
+            display: none
+.gallery-controls
+    &__item 
+        display: none
+
+@media screen and (max-width: 768px)
+    .b-gallery 
+        position: relative
+        .container
+            width: 100%
+            max-width: none
+        .b-theme-box
+            padding-left: 0
+            padding-right: 0
+            width: 100%
+            max-width: none
+    .b-gallery__item:nth-child(even),
+    .b-gallery__item:nth-child(odd),
+        width: 100%
+        height: 232px
+        margin: 0
+        border-left: 3px solid #fff
+        border-right: 3px solid #fff
+        img 
+            min-height: 100%
+            width: auto
+    .gallery-controls
+        &__item 
+            display: flex 
+            justify-content: center
+            align-items: center
+            height: 37px
+            width: 37px
+            background-color: rgba(#5fd7cd, .8)
+            border: none 
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            &:hover 
+                background: rgba(#5fd7cd, 1)
+            img 
+                display: block
+                height: 14px
+            &_prev
+                left: 0
+            &_next
+                right: 0
+    .tns-outer
+        button 
+            display: none
+
+
+    
+
+
+            
